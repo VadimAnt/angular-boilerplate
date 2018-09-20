@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { JwtInterceptor, ErrorInterceptor } from './core/interceptors';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
