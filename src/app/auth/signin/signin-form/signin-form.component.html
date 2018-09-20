@@ -1,0 +1,10 @@
+<form (ngSubmit)="onSubmit()" #signin="ngForm">
+  <p>{{ errors }}</p>
+  <label for="">
+    Email: <input type="text" required [(ngModel)]="model.email" name="email">
+  </label>
+  <label for="">
+    Password: <input type="text" required [(ngModel)]="model.password" name="password">
+  </label> 
+  <button type="submit">Send</button>
+</form>
