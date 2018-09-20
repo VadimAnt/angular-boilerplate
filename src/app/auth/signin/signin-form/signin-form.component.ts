@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Signin } from './signin';
 import { AuthService } from '../../../core/services';
 
@@ -13,7 +14,10 @@ export class SigninFormComponent implements OnInit {
   public submitted = false;
   public errors;
   
-  constructor(public authService: AuthService) { }
+  constructor(
+    public authService: AuthService,
+    public router: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -23,7 +27,7 @@ export class SigninFormComponent implements OnInit {
     console.log('submit');
     this.authService.signin(this.model.email, this.model.password).subscribe(
       data => {
-        console.log(data);
+        this.router.navigate(['/users']);
       },
       error => {
         this.errors = error;
