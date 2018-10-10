@@ -18,6 +18,10 @@ const routes: Routes = [
     loadChildren: './users/users.module#UsersModule',
     canActivate:[AuthGuard] 
   },
+  { 
+    path: 'posts', 
+    loadChildren: './posts/posts.module#PostsModule', 
+  },
   {
     path: '**', 
     component: NotFoundComponent, 
