@@ -10,13 +10,13 @@ import { IUser } from '../../core/interfaces';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-  public users$: IUser[];
+  public users: IUser[];
 
   constructor(public userService: UserService) { }
 
   ngOnInit() {
     this.userService.getUsers().subscribe(result => {
-      this.users$ = result;
+      this.users = result;
     })
   }
 
