@@ -10,6 +10,7 @@ import { JwtInterceptor, ErrorInterceptor } from './core/interceptors';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HeaderComponent } from './share/header/header.component';
 import { FooterComponent } from './share/footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FooterComponent } from './share/footer/footer.component';
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
